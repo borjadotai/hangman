@@ -17,6 +17,7 @@ class Hangman:
                 if(guess == char):
                     self.word_guessed[i] = guess
             self.num_letters-=1
+            print("".join(self.word_guessed))
         else:
             self.num_lives-=1
             print("Sorry, letter {} is not in the word.".format(guess))
@@ -40,7 +41,7 @@ class Hangman:
                     self.check_guess(guess)
                     self.list_of_guesses.append(guess)
             else:
-                raise ValueError("Invalid letter. Please, enter a single alphabetical character.")
+                raise ValueError()
         except ValueError as e:
             print("Invalid letter. Please, enter a single alphabetical character.")
 
@@ -55,5 +56,6 @@ def play_game(word_list):
             game.ask_for_input()
         else:
             print("Congratulations. You won the game!")
+            break
 
 play_game(["apple", "banana"])
