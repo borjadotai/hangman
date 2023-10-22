@@ -2,8 +2,8 @@ import random
 
 word_list = ["banana", "apple", "cherries", "pear", "peach"]
 word = random.choice(word_list)
-print(word)
 
+print('Take a guess, write one character:')
 guess = input()
 
 try:
